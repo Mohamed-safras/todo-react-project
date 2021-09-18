@@ -1,15 +1,17 @@
-.TodoList-continer {
+.new_todo {
   width: 100%;
-  height: 100%;
+  height: 50px;
   padding: 10px 20px;
   border-radius: 10px;
   margin-top: 20px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   background: var(--todo-input);
+  position: sticky;
+  top: 70px;
+  z-index: 10;
 }
-
 .checked-item {
   width: 20px;
   height: 20px;
@@ -34,6 +36,33 @@
   background: var(--clr-linear);
 }
 
-.TodoList-item {
+.continer {
+  width: 700px;
+  max-width: 800px;
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .continer {
+    width: 500px;
+  }
+}
+
+.new_todo form {
+  width: 100%;
+  height: 100%;
   margin-left: 10px;
+}
+.new_todo form input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 18px;
+  color: var(--clr-border);
+}
+
+.new_todo form input::placeholder {
+  color: var(--todo-input-placeholder);
 }

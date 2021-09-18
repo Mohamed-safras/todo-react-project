@@ -1,13 +1,38 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  background-color: var(--clr-primary);
+  font-size: 18px;
+  justify-content: center;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: hsl(235, 21%, 11%);
+  --clr-secondary: hsl(235, 24%, 19%);
+  --clr-border: 2px solid hsl(237, 14%, 26%);
+  --clr-linear: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+  --clr-linear2: linear-gradient(135deg, #3ca8f0 30%, #8433cf 70%);
+  --todo-input: hsl(234, 39%, 85%);
+  --todo-input-placeholder: hsl(233, 14%, 35%);
+  --todo-text: hsl(234, 39%, 85%);
+  --box-shadow1: 0px 2px 30px 0px rgba(0, 0, 0, 0.4);
+  --box-shadow2: 0 0px 7px 0px hsl(235, 21%, 11%);
+  --item-clear: hsl(220, 98%, 61%);
 }
