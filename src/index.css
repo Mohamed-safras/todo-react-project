@@ -27,6 +27,7 @@ code {
   --clr-primary: hsl(235, 21%, 11%);
   --clr-secondary: hsl(235, 24%, 19%);
   --clr-border: 2px solid hsl(237, 14%, 26%);
+  --clr-border-white: 2px solid hsl(234, 39%, 85%);
   --clr-linear: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
   --clr-linear2: linear-gradient(135deg, #3ca8f0 30%, #8433cf 70%);
   --todo-input: hsl(234, 39%, 85%);

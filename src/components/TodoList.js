@@ -1,13 +1,21 @@
 import React from "react";
+import Todo from "./Todo";
 
-const TodoList = ({ todoInput }) => {
+const TodoList = ({ todoList, setTodoList, filterTodo }) => {
   return (
-    <div className="TodoList-continer">
-      <div className="checked-item">
-        <div className="check-mark"></div>
-      </div>
-      <div className="TodoList-item">{todoInput}</div>
-    </div>
+    <>
+      {filterTodo.map((todo) => {
+        return (
+          <Todo
+            key={todo.id}
+            text={todo.text}
+            todoList={todoList}
+            setTodoList={setTodoList}
+            Todo={todo}
+          />
+        );
+      })}
+    </>
   );
 };
 

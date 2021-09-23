@@ -1,7 +1,7 @@
 import React from "react";
 import "../components/todo.css";
 
-const Todo = ({ todoInput, setTodoInput, todoList, setTodoList }) => {
+const TodoForm = ({ todoInput, setTodoInput, todoList, setTodoList }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -40,4 +40,4 @@ const Todo = ({ todoInput, setTodoInput, todoList, setTodoList }) => {
   );
 };
 
-export default Todo;
+export default TodoForm;
