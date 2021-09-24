@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import FilterTodo from "./components/FilterTodo";
+import Notification from "./components/Notification";
+
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 import TodoNotFound from "./components/TodoNotFound";
@@ -10,6 +12,7 @@ const App = () => {
   const [todoList, setTodoList] = useState([]);
   const [active, setActive] = useState("all");
   const [filterTodo, setFilterTodo] = useState([]);
+  const [notify, setNotify] = useState({ isNotify: false, msg: "", type: "" });
 
   const getLocalTodoList = () => {
     if (localStorage.getItem("todoList") === null) {
@@ -54,6 +57,8 @@ const App = () => {
         setTodoList={setTodoList}
         todoInput={todoInput}
         setTodoInput={setTodoInput}
+        notify={notify}
+        setNotify={setNotify}
       />
 
       {filterTodo.length > 0 ? (
@@ -61,11 +66,22 @@ const App = () => {
           setTodoList={setTodoList}
           todoList={todoList}
           filterTodo={filterTodo}
+          notify={notify}
+          setNotify={setNotify}
         />
       ) : (
         <TodoNotFound active={active} />
       )}
       <FilterTodo active={active} setActive={setActive} />
+
+      {notify.isNotify === true && (
+        <Notification
+          msg={notify.msg}
+          type={notify.type}
+          setNotify={setNotify}
+          notify={notify}
+        />
+      )}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import Todo from "./Todo";
 
-const TodoList = ({ todoList, setTodoList, filterTodo }) => {
+const TodoList = ({ todoList, setTodoList, filterTodo, notify, setNotify }) => {
   return (
     <>
       {filterTodo.map((todo) => {
@@ -12,6 +12,8 @@ const TodoList = ({ todoList, setTodoList, filterTodo }) => {
             todoList={todoList}
             setTodoList={setTodoList}
             Todo={todo}
+            notify={notify}
+            setNotify={setNotify}
           />
         );
       })}

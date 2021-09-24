@@ -1,12 +1,14 @@
 import React from "react";
+import { Notify } from "../components/notifyFunc";
 
-const Todo = ({ text, todoList, setTodoList, Todo }) => {
+const Todo = ({ text, todoList, setTodoList, Todo, setNotify }) => {
   const removeTodo = () => {
     setTodoList(
       todoList.filter((todo) => {
         return todo.id !== Todo.id;
       })
     );
+    Notify(setNotify, "todo has been deleted");
     return Todo;
   };
 

@@ -1,0 +1,27 @@
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  transform: translateY(100px);
+  display: none;
+  transition: all 1s ease-in-out;
+  border-radius: 10px;
+}
+
+.active {
+  display: inline;
+  transform: translateY(0);
+}
+
+.success {
+  color: #1db954;
+}
+
+.warning {
+  color: #e60023;
+}

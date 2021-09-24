@@ -1,7 +1,15 @@
 import React from "react";
 import "../components/todo.css";
-
-const TodoForm = ({ todoInput, setTodoInput, todoList, setTodoList }) => {
+import Notification from "./Notification";
+import { Notify } from "../components/notifyFunc";
+const TodoForm = ({
+  todoInput,
+  setTodoInput,
+  todoList,
+  setTodoList,
+  notify,
+  setNotify,
+}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -17,6 +25,7 @@ const TodoForm = ({ todoInput, setTodoInput, todoList, setTodoList }) => {
         },
       ]);
       setTodoInput("");
+      Notify(setNotify, "new Todo added");
     }
   };
 
@@ -36,6 +45,14 @@ const TodoForm = ({ todoInput, setTodoInput, todoList, setTodoList }) => {
           />
         </form>
       </div>
+      {notify.isNotify === true && (
+        <Notification
+          msg={notify.msg}
+          type={notify.type}
+          setNotify={setNotify}
+          notify={notify}
+        />
+      )}
     </div>
   );
 };
